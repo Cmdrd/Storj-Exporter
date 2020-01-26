@@ -8,6 +8,8 @@ User=storj_exporter
 Group=storj_exporter
 Type=simple
 ExecStart=/usr/bin/python3 /usr/local/bin/storj-exporter.py
+Restart=on-failure
+RestartSec=5s
 
 [Install]
 WantedBy=multi-user.target
